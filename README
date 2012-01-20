@@ -1,10 +1,10 @@
-== Block-based NSTimer
+#### Block-based NSTimer
 
 Uses blocks instead of the old-school target & selector NSTimer.
 
-== Scheduling a Timer
+#### Scheduling a Timer
 
-<tt>
+```
 
 // Can be repeating or single-fire
 [[ASBlockTimer sharedTimers] scheduleBlockTimerWithTimeInterval:1.0 userInfo:nil repeats:YES completion:^(NSTimer *timer) {
@@ -12,19 +12,19 @@ Uses blocks instead of the old-school target & selector NSTimer.
         NSLog(@"Repeats...");
 }];
 
-</tt>
+```
 
-== Invalidating a Timer
+#### Invalidating a Timer
 
-<tt>
+```
 NSTimer* timer = ...
 
 [[ASBlockTimer sharedTimers] cancelBlockTimer:timer];
 
-</tt>
+```
 
-== Invalidate all Timers
+#### Invalidate all Timers
 
-<tt>
+```
 [[ASBlockTimer sharedTimers] cancelAllBlockTimers];
-</tt>
+```
