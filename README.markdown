@@ -7,7 +7,7 @@ Uses blocks instead of the old-school target & selector NSTimer.
 ```
 
 // Can be repeating or single-fire
-[[ASBlockTimer sharedTimers] scheduleBlockTimerWithTimeInterval:1.0 userInfo:nil repeats:YES completion:^(NSTimer *timer) {
+NSTimer *myTimer = [[ASBlockTimer sharedTimers] scheduleBlockTimerWithTimeInterval:1.0 userInfo:nil repeats:YES completion:^(NSTimer *timer) {
        
         NSLog(@"Repeats...");
 }];
@@ -17,9 +17,9 @@ Uses blocks instead of the old-school target & selector NSTimer.
 #### Invalidating a Timer
 
 ```
-NSTimer* timer = ...
+NSTimer* myTimer = ...
 
-[[ASBlockTimer sharedTimers] cancelBlockTimer:timer];
+[[ASBlockTimer sharedTimers] cancelBlockTimer:myTimer];
 
 ```
 
